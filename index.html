@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Collaborative News Feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+    }
+    input, button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🗞️ Collaborative News Feed</h1>
+
+  <!-- AUTHENTIFICATION -->
+  <div class="box" id="authBox">
+    <h2>Inscription</h2>
+    <form id="signupForm">
+      <input id="signupEmail" type="email" placeholder="Email" required />
+      <input id="signupPassword" type="password" placeholder="Mot de passe" required />
+      <button type="submit">Créer un compte</button>
+    </form>
+
+    <h2>Connexion</h2>
+    <form id="loginForm">
+      <input id="loginEmail" type="email" placeholder="Email" required />
+      <input id="loginPassword" type="password" placeholder="Mot de passe" required />
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
+
+  <!-- POST MESSAGE -->
+  <div class="box" id="postBox" style="display:none;">
+    <h2>Publier un message</h2>
+    <form id="postForm">
+      <input id="messageInput" type="text" placeholder="Votre message..." required />
+      <button type="submit">Publier</button>
+    </form>
+    <button id="logoutBtn">Se déconnecter</button>
+  </div>
+
+  <!-- MESSAGES -->
+  <div class="box" id="messagesBox" style="display:none;">
+    <h2>Messages</h2>
+    <div id="messages"></div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
